@@ -2,8 +2,6 @@ package cz.cvut.fit.gephi.multimode;
 
 import java.util.HashSet;
 import java.util.Set;
-import javax.swing.JOptionPane;
-import org.gephi.datalab.api.AttributeColumnsController;
 import org.gephi.graph.api.Column;
 
 import org.gephi.graph.api.Graph;
@@ -206,7 +204,7 @@ public final class MultiModeWindowTopComponent extends TopComponent {
         start.setEnabled(false);
         if (attributes.getSelectedIndex() > 0) {
             Column col = (Column) attributes.getSelectedItem();
-
+            
             // load all possible values of attribute
             GraphController graphController = Lookup.getDefault().lookup(GraphController.class);
             Graph graph = graphController.getGraphModel().getGraphVisible();
